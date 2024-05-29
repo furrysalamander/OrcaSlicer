@@ -46,9 +46,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        os: [ubuntu-20.04, macos-12]
+        arch: [x86_64, arm64]
         include:
-          - os: [ubuntu-20.04, macos-12]
-            arch: [x86_64, arm64]
           - os: windows-latest
             arch: x86_64
     uses: ./.github/workflows/build_check_cache.yml
